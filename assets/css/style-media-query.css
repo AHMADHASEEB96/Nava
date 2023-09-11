@@ -1,0 +1,105 @@
+/* Media query */
+@media (max-width: 767px) {
+  .major-section .major-section-header {
+    font-size: 2rem;
+  }
+  .major-section .major-section-content h4 {
+    font-size: 1rem;
+  }
+  .major-section .container .input-div input::placeholder,
+  .major-section .container .input-div p {
+    font-size: 0.7rem;
+  }
+
+  #statics .container div {
+    font-size: 0.5em;
+  }
+  .gallery-section .container .gallery {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: repeat(3, 1fr);
+  }
+
+  .gallery-section .container .gallery .gall-img-divs {
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    position: relative;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+  }
+  .gallery-section .container .gallery .gall-major-img-div {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    width: 420px;
+  }
+  #add-your-boat .container .featured-boats-gallery .gall-img-divs {
+    width: 250px;
+    height: 200px;
+  }
+  footer .container > div:not(.contact-div) {
+    display: none;
+  }
+  footer .container {
+    width: 80%;
+  }
+
+  footer .container * {
+    font-size: 0.9em;
+  }
+  footer .container .contact-div .input-div {
+    margin-bottom: 20px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  .major-section .major-section-header {
+    font-size: 3rem;
+  }
+  #statics .container div {
+    font-size: 0.8em;
+  }
+  .gallery-section .container .gallery {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: repeat(3, 1fr);
+  }
+
+  .gallery-section .container .gallery .gall-img-divs {
+    width: 250px;
+    height: 250px;
+    margin: 10px;
+    position: relative;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+  }
+  .gallery-section .container .gallery .gall-major-img-div {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    width: 520px;
+  }
+  #add-your-boat .container .featured-boats-gallery .gall-img-divs {
+    width: 350px;
+    height: 250px;
+  }
+  footer .container {
+    width: 80%;
+  }
+
+  footer .container * {
+    font-size: 0.9em;
+  }
+  footer .container .contact-div .input-div {
+    margin-bottom: 20px;
+  }
+}
+
+/* 
+@media (min-width: ) {
+
+} */

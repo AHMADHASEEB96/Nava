@@ -1,0 +1,508 @@
+/* global  */
+
+/* Start Variables */
+:root {
+  --main-font-color: white;
+  --secondary-font-color: black;
+  --bg-color: #0097b2;
+  --revealing-color: #0097b2;
+  --current-color: #00bf63;
+  --section-padding: 100px;
+  --transparent-color: rgb(15 116 143 / 70%);
+  --p-color: #777;
+  --margin: 50px;
+}
+/* End Variables */
+
+/* Start Global Rules */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+  color: var(--main-font-color);
+}
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  position: relative;
+  font-family: "Anton", sans-serif;
+  font-family: "Cairo", sans-serif;
+  font-family: "XMYekanRegular";
+  font-family: "Work Sans", sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  color: var(--main-font-color);
+  transition: 0.5s;
+  /* color: black; */
+  /*font-size: 100px;
+  */
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  -webkit-transition: 0.5s;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+button {
+  font-family: cairo;
+}
+
+p {
+  font-family: "XMYekanRegular";
+  font-family: "Work Sans", sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+}
+.container {
+  width: 80%;
+
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.hidden {
+  display: none !important;
+  /* visibility: hidden; */
+  /* width: 0px; */
+  /* cant use those two last properties cause in media query when i change the display to block or flex still those tow properties will be activated marking the elements 
+  not visible and its width is zero */
+}
+/* *:not(body nav) {
+  color: black;
+} */
+
+nav {
+  /*width: 100vw;
+  */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+  height: 70px;
+  background-color: rgba(0, 0, 0);
+  position: sticky;
+  top: 0;
+}
+nav .container {
+  display: flex;
+  height: 70px;
+  background-color: black;
+  position: absolute;
+  top: 0;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 10;
+}
+
+/* Initiate navbar  */
+#sign-up-btn {
+  padding: 5px 10px;
+  border: 1px solid white;
+  border-radius: 1px;
+
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  -ms-border-radius: 1px;
+  -o-border-radius: 1px;
+}
+
+nav ul {
+  color: var(--main-font-color);
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  margin: auto 0;
+}
+nav ul li {
+  color: var(--main-font-color);
+  cursor: pointer;
+}
+.major-section {
+  height: 60vh;
+  background-image: url("../media/images/hero-background.jpg");
+  background-size: cover;
+  /* background-repeat: no-repeat; */
+  position: relative;
+}
+
+.major-section .container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.major-section .container .major-section-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.major-section .major-section-header {
+  font-size: 4rem;
+}
+.input-div {
+  margin-top: 50px;
+  width: 100%;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.input-div input {
+  /*padding: 15px 40px;
+  */
+  padding: 10px;
+  color: black;
+  width: 60%;
+  position: relative;
+  border: none;
+  outline: none;
+  height: inherit;
+  border-radius: 10px 0 0 10px;
+  -webkit-border-radius: 10px 0 0 10px;
+  -moz-border-radius: 10px 0 0 10px;
+  -ms-border-radius: 10px 0 0 10px;
+  -o-border-radius: 10px 0 0 10px;
+}
+.input-div input::placeholder {
+  text-transform: uppercase;
+  text-align: center;
+}
+.input-div input:focus {
+  border: 3px solid red;
+}
+.input-div p {
+  color: white;
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  height: inherit;
+  margin: 0;
+  padding: 0 10px;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 400;
+  cursor: pointer;
+  border-radius: 0 10px 10px 0;
+  /*border-radius: 10px;
+  */
+  -webkit-border-radius: 0 10px 10px 0;
+  -moz-border-radius: 0 10px 10px 0;
+  -ms-border-radius: 0 10px 10px 0;
+  -o-border-radius: 0 10px 10px 0;
+}
+.trade-with-us .container .input-div p {
+  padding: 0 50px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.major-section .container .input-div p i {
+  color: white;
+}
+
+#statics {
+  position: absolute;
+  bottom: -50px;
+  left: 50%;
+  transform: translate(-50%);
+  -webkit-transform: translate(-50%);
+  -moz-transform: translate(-50%);
+  -ms-transform: translate(-50%);
+  -o-transform: translate(-50%);
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+#statics .container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 60vw;
+  background-color: var(--main-font-color);
+}
+
+#statics .container div {
+  text-align: center;
+  position: relative;
+  padding: 20px 0;
+  width: calc(100% / 4);
+}
+
+#statics .container div * {
+  color: black;
+  margin: 0;
+}
+#statics .container div *:hover {
+  color: red;
+}
+
+#statics .container div:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 1px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  height: 60%;
+  width: 1px;
+  background-color: rgb(0 0 0 / 20%);
+}
+
+.gallery-section .container {
+  padding: 100px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.gallery-section .container * {
+  color: black;
+}
+.gallery-section .container .gall-header {
+  text-align: center;
+}
+.gallery-section .container .gall-header h1 {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+}
+.gallery-section .container .gallery {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+.gallery-section .container .gallery .gall-img-divs {
+  width: 300px;
+  height: 300px;
+  margin: 10px;
+  position: relative;
+}
+.gallery-section .container .featured-boats-gallery .gall-img-divs {
+  width: 400px;
+  height: 400px;
+  margin: 10px;
+  position: relative;
+}
+.gallery-section .container .gallery .gall-img-divs::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: inherit;
+  -webkit-border-radius: inherit;
+  -moz-border-radius: inherit;
+  -ms-border-radius: inherit;
+  -o-border-radius: inherit;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+}
+
+.gallery-section .container .gallery .gall-img-divs:hover::before {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.gallery-section .container .gallery .gall-major-img-div {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  width: 620px;
+}
+.gallery-section .container .gallery * {
+  color: white;
+}
+
+.gallery-section .container .gallery .gall-img-divs img {
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  -webkit-border-radius: inherit;
+  -moz-border-radius: inherit;
+  -ms-border-radius: inherit;
+  -o-border-radius: inherit;
+}
+
+.gallery-section .container .gallery .gall-img-divs .gall-imgs-abs-divs {
+  position: absolute;
+  /* width: 10px; */
+}
+.gallery-section .container .gallery .gall-img-divs .gall-imgs-abs-divs p {
+  font-weight: 600;
+}
+
+.gallery .boats-nums-div {
+  top: 20px;
+  left: 20px;
+  background-color: red;
+  padding: 5px 10px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.gallery .gall-img-divs .country-div {
+  bottom: 20px;
+  left: 20px;
+}
+.gall-btn {
+  border: none;
+  border: 1px solid black;
+  padding: 20px 40px;
+  background-color: white;
+  box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.2) outset;
+  text-transform: uppercase;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.gall-btn:hover {
+  box-shadow: 0 0 0px 2px rgba(0, 0, 0) inset; /* gives a border inside */
+  /* border : 4px solid black; this would change size and pushed surroundings */
+}
+#add-your-boat {
+  /* height: 60vh; */
+  /* overflow: hidden; */
+}
+
+#add-your-boat .container .featured-boats-gallery .gall-img-divs {
+  width: 450px;
+  height: 280px;
+  margin: 10px;
+  position: relative;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.trade-with-us {
+  background-image: url("../media/images/rent-boat-background.jpg");
+  background-size: auto;
+  background-repeat: no-repeat;
+}
+
+#add-your-boat .container .gallery {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: repeat(2, 1fr);
+}
+
+footer {
+  background-color: rgb(64, 64, 64);
+  /* padding: 80px 0; */
+  height: 30vh;
+  display: flex;
+  align-items: center;
+}
+footer .container {
+}
+footer .container * {
+  color: var(--main-font-color);
+  margin: 0;
+  padding: 0;
+  font-size: 0.95em;
+}
+
+footer .container {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+}
+
+footer .container > div {
+  flex: auto;
+}
+footer .container > div h3 {
+  text-transform: uppercase;
+}
+footer .container > div > p {
+  margin-top: 5px;
+  font-weight: 400;
+}
+
+footer .container > div > p:first-of-type {
+  margin-top: 20px;
+}
+
+footer .input-div {
+  justify-content: start;
+  width: 100%;
+  height: 36px;
+}
+footer .input-div P {
+  padding: 0 12px;
+}
+footer .contact-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+}
+
+footer .contact-div .social-icons {
+  font-size: 2rem;
+  display: flex;
+  gap: 30px;
+}
+
+footer .social-icons a > svg:hover {
+  color: red !important;
+}
